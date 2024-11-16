@@ -1,0 +1,57 @@
+.book-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .book {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    perspective: 1500px; /* Add perspective for 3D effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page {
+    backface-visibility: hidden; /* Hide the back side when flipped */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease, box-shadow 0.4s ease; /* Smooth transition */
+    transform-style: preserve-3d;
+  }
+  
+  /* Active page in front */
+  .page.active {
+    transform: none; /* Front page has no transform */
+  }
+  
+  /* Flipped page with curl effect */
+  .page.flipped {
+    transform: rotateY(-180deg) translateZ(-20px) scale(0.98); /* Rotate, translate, scale */
+    transform-origin: top left; /* Bend from the top left corner */
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for curl depth */
+    opacity: 0.7; /* Make the back page more transparent */
+  }
+  
+  /* Paper corner curl effect */
+  .page.flipped:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.1); /* Add a light shadow effect to simulate the curl */
+    transform: rotate(45deg);
+    pointer-events: none; /* Don't interfere with the page's interaction */
+    opacity: 0.6; /* Gloss effect */
+  }
+  
+  /* Active page gloss effect */
+  .page.active:before {
+    opacity: 0.3;
+  }
+  
