@@ -2,6 +2,16 @@ import { Box, Grid2, Typography } from "@mui/material";
 import { generateRandomColor } from "../../utils";
 import CoverImage  from './mountain.jpeg'
 import PaperBackgroundImage  from '../paper.webp'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+import '@fontsource/pacifico';
+
+const theme = createTheme({
+    typography: {
+        fontFamily: 'Pacifico, cursive',
+    },
+});
+
 
 
 const FrontPage: React.FC = () => {
@@ -9,6 +19,8 @@ const FrontPage: React.FC = () => {
     const place = "Gurgoan";
 
     return (
+        <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Box
             sx={{
                 padding: 0,
@@ -25,7 +37,8 @@ const FrontPage: React.FC = () => {
                 sx={{ 
                     margin: 'auto', 
                     paddingTop: 4, 
-                    textAlign: 'center' 
+                    textAlign: 'center',
+                    fontFamily: 'Pacifico, cursive'
                 }} 
                 variant="h4" 
                 gutterBottom
@@ -35,9 +48,10 @@ const FrontPage: React.FC = () => {
             {/* black line */}
             <Box
                 sx={{
-                    height: "5px",
+                    height: "2px",
                     backgroundColor: "black",
                     marginY: 0,
+                    marginTop: '6px',
                 }}
             />
             <Box>
@@ -60,7 +74,7 @@ const FrontPage: React.FC = () => {
             {/* black line */}
             <Box
                 sx={{
-                    height: "5px",
+                    height: "2px",
                     backgroundColor: "black",
                     marginY: 0,
 
@@ -99,6 +113,8 @@ const FrontPage: React.FC = () => {
                 </Box>
             
         </Box>
+    </ThemeProvider>
+
     );
 };
 

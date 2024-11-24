@@ -11,7 +11,7 @@ function App() {
 
   const maxWidth = window.innerWidth;
   const desktopAspectRatio = 1.6;
-  const mobileAspectRatio = 2;
+  const mobileAspectRatio = 1.78;
   const deskTopWidthDivider = 0.3;
   const mobileWidthDivider = 0.95;
   // const bookWidth = maxWidth * 0.3;

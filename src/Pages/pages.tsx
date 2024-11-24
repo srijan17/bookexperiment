@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { generateRandomColor } from "../utils";
-import FrontPage from "./FrontPage copy/FrontPage";
+import FrontPage from "./FrontPageImg/FrontPage";
+// import FrontPage from "./FrontPage copy/FrontPage";
 import FirstPage from "./FirstPage/FirstPage";
 
 const Pages = ()=>{
