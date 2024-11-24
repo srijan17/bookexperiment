@@ -69,7 +69,7 @@ function FlipBookSample(props: BookProps) {
         </Grid>
         
       </Grid>
-      <Grid>
+      {/* <Grid>
       <Grid item>
           <IconButton onClick={prevPage}>
             <NavigateBeforeRoundedIcon />
@@ -80,7 +80,7 @@ function FlipBookSample(props: BookProps) {
             <NavigateNextRoundedIcon />
           </IconButton>
         </Grid>
-      </Grid>
+      </Grid> */}
     </Box>
   );
 }

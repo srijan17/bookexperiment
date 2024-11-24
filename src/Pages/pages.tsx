@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { generateRandomColor } from "../utils";
-import FrontPage from "./FrontPage/FrontPage";
+import FrontPage from "./FrontPage copy/FrontPage";
 import FirstPage from "./FirstPage/FirstPage";
 
 const Pages = ()=>{
@@ -24,7 +24,7 @@ const Pages = ()=>{
     </Box>
   ))
 
-  return [FrontPage(),FirstPage(),...pages] 
+  return [FrontPage({}),FirstPage(),...pages] 
 }
 
 export default Pages

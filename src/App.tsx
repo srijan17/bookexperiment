@@ -10,10 +10,10 @@ import Pages from './Pages/pages';
 function App() {
 
   const maxWidth = window.innerWidth;
-  const desktopAspectRatio = 1.2;
-  const mobileAspectRatio = 1.5;
+  const desktopAspectRatio = 1.6;
+  const mobileAspectRatio = 2;
   const deskTopWidthDivider = 0.3;
-  const mobileWidthDivider = 0.8;
+  const mobileWidthDivider = 0.95;
   // const bookWidth = maxWidth * 0.3;
   // const bookHeight = bookWidth * aspectRatio;
 
@@ -57,7 +57,7 @@ function App() {
       setBookHeight(calcHeight);
     }
     else if (isMobile) {
-      const calcWidth = maxWidth 
+      const calcWidth = maxWidth  * mobileWidthDivider
       const calcHeight = calcWidth * mobileAspectRatio
 
       setBookWidth(calcWidth);
