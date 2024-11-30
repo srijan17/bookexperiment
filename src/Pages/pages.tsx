@@ -3,16 +3,18 @@ import { generateRandomColor } from "../utils";
 import FrontPage from "./FrontPageImg/FrontPage";
 // import FrontPage from "./FrontPage copy/FrontPage";
 import FirstPage from "./FirstPage/FirstPage";
+import PageBackground from "./page.jpg";
 
-const Pages = ()=>{
-    const colors = Array.from({ length: 10 }, generateRandomColor);
+const Pages = () => {
+  const colors = Array.from({ length: 10 }, generateRandomColor);
 
 
-  const pages =  colors.map((color, index) => (
+  const pages = colors.map((color, index) => (
     <Box
       key={index}
       sx={{
-        backgroundColor: color,
+        backgroundImage: `url(${PageBackground})`,
+        backgroundSize: 'cover',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -25,7 +27,7 @@ const Pages = ()=>{
     </Box>
   ))
 
-  return [FrontPage({}),FirstPage(),...pages] 
+  return [FrontPage({}), FirstPage(), ...pages]
 }
 
 export default Pages

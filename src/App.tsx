@@ -6,6 +6,7 @@ import Book from './BookEffect/Book';
 import { generateRandomColor } from './utils';
 import { Box, Typography } from '@mui/material';
 import Pages from './Pages/pages';
+import Table from './table.jpg';
 
 function App() {
 
@@ -57,7 +58,7 @@ function App() {
       setBookHeight(calcHeight);
     }
     else if (isMobile) {
-      const calcWidth = maxWidth  * mobileWidthDivider
+      const calcWidth = maxWidth * mobileWidthDivider
       const calcHeight = calcWidth * mobileAspectRatio
 
       setBookWidth(calcWidth);
@@ -84,17 +85,25 @@ function App() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [isMobile]);
-  
+
 
 
   return (
 
-
-    <div style={{ paddingLeft: paddingLeft, paddingRight: paddingRight, transition: 'padding 0.5s ease' }}>
-
-    {isMobile != null && <FlipBookSample pages={Pages()} adjustPadding={adjustPadding} bookHeight={bookHeight} bookWidth={bookWidth} isMobile={isMobile} />}
-
-  </div>
+    <div style={{
+      paddingLeft: paddingLeft,
+      paddingRight: paddingRight,
+      transition: 'padding 0.5s ease',
+      backgroundImage: `url(${Table})`,
+      height: '100vh',
+      backgroundSize: 'cover',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      overflow: 'hidden'
+    }}>
+      {isMobile != null && <FlipBookSample pages={Pages()} adjustPadding={adjustPadding} bookHeight={bookHeight} bookWidth={bookWidth} isMobile={isMobile} />}
+    </div>
 
   );
 }

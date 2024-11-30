@@ -17,7 +17,7 @@ function FlipBookSample(props: BookProps) {
   const book = useRef<{ pageFlip: () => typeof PageFlip | null }>(null);
   const { bookHeight, bookWidth } = props;
 
-  const prevPage = async() => {
+  const prevPage = async () => {
     if (book && book.current) {
       const bookRef = book.current as any;
       bookRef.pageFlip().flipPrev('bottom');
@@ -32,9 +32,9 @@ function FlipBookSample(props: BookProps) {
 
 
   return (
-    <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Grid container  alignItems="center" justifyContent="center">
-        
+    <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', marginY: 'auto' }}>
+      <Grid container alignItems="center" justifyContent="center">
+
         <Grid item>
           <PageFlip
             style={{}}
@@ -64,10 +64,10 @@ function FlipBookSample(props: BookProps) {
 
             ref={book}
           >
-           {props.pages}
+            {props.pages}
           </PageFlip>
         </Grid>
-        
+
       </Grid>
       {/* <Grid>
       <Grid item>
