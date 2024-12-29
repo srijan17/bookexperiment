@@ -95,7 +95,7 @@ function App() {
       paddingRight: paddingRight,
       transition: 'padding 0.5s ease',
       // backgroundImage: `url(${Table})`,
-      backgroundColor: 'black',
+      backgroundColor: 'cornsilk',
       height: '100vh',
       backgroundSize: 'cover',
       display: 'flex',
