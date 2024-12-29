@@ -8,15 +8,17 @@ import first from '../main.png'
 import second from '../second.png'
 import third from '../third.png'
 import fourth from '../fourth.png'
+import third1 from '../third1.png'
+import third2 from '../third2.png'
 const Pages = () => {
   const colors = Array.from({ length: 10 }, generateRandomColor);
 
-  const images = [first, second, third, fourth]
-  const pages = colors.map((color, index) => (
+  const images = [first, second, third, third1, third2, fourth]
+  const pages = images.map((image, index) => (
     <Box
       key={index}
       sx={{
-        backgroundImage: `url(${images[index]})`,
+        backgroundImage: `url(${image})`,
         backgroundSize: 'cover',
         display: 'flex',
         alignItems: 'center',
