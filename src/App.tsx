@@ -11,8 +11,8 @@ import Table from './table.jpg';
 function App() {
 
   const maxWidth = window.innerWidth;
-  const desktopAspectRatio = 1.6;
-  const mobileAspectRatio = 1.78;
+  const desktopAspectRatio = 1.41;
+  const mobileAspectRatio = 1.41;
   const deskTopWidthDivider = 0.3;
   const mobileWidthDivider = 0.95;
   // const bookWidth = maxWidth * 0.3;
