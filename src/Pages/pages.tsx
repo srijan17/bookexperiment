@@ -6,14 +6,29 @@ import FirstPage from "./FirstPage/FirstPage";
 import PageBackground from "./page.jpg";
 import first from '../main.png'
 import second from '../second.png'
+import groom from '../groom.png'
+import bride from '../bride.png'
 import third from '../third.png'
 import fourth from '../fourth.png'
 import third1 from '../third1.png'
 import third2 from '../third2.png'
-const Pages = () => {
-  const colors = Array.from({ length: 10 }, generateRandomColor);
 
-  const images = [first, second, third, third1, third2, fourth]
+interface PageProps {
+  isMobile: boolean | null;
+  side: string;
+}
+const Pages = (props: PageProps) => {
+  const colors = Array.from({ length: 10 }, generateRandomColor);
+  let images: String[] = []
+  if (props.side.toLowerCase() == "groom") {
+
+    images = [first, groom, third, third1, third2, fourth]
+  }
+  else {
+    images = [first, bride, third, fourth]
+
+  }
+
   const pages = images.map((image, index) => (
     <Box
       key={index}

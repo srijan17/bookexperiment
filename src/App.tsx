@@ -86,7 +86,8 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMobile]);
 
-
+  // fetch query parameter side from url
+  const side = new URLSearchParams(window.location.search).get('side') ?? 'groom';
 
   return (
 
@@ -103,7 +104,7 @@ function App() {
       alignItems: 'center',
       overflow: 'hidden'
     }}>
-      {isMobile != null && <FlipBookSample pages={Pages()} adjustPadding={adjustPadding} bookHeight={bookHeight} bookWidth={bookWidth} isMobile={isMobile} />}
+      {isMobile != null && <FlipBookSample pages={Pages({ side, isMobile })} adjustPadding={adjustPadding} bookHeight={bookHeight} bookWidth={bookWidth} isMobile={isMobile} />}
     </div>
 
   );
