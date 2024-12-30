@@ -12,6 +12,7 @@ import third from '../third.png'
 import fourth from '../fourth.png'
 import third1 from '../third1.png'
 import third2 from '../third2.png'
+import FormPage from "./form";
 
 interface PageProps {
   isMobile: boolean | null;
@@ -22,7 +23,7 @@ const Pages = (props: PageProps) => {
   let images: String[] = []
   if (props.side.toLowerCase() == "groom") {
 
-    images = [first, groom, third, third1, third2, fourth]
+    images = [first, groom, third, fourth]
   }
   else {
     images = [first, bride, third, fourth]
@@ -44,7 +45,7 @@ const Pages = (props: PageProps) => {
     </Box>
   ))
   // FrontPage({}), FirstPage(),
-  return [...pages]
+  return [...pages, FormPage({})]
 }
 
 export default Pages
