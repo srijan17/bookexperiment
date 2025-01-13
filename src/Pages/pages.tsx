@@ -10,20 +10,50 @@ import groom from '../groom.png'
 import bride from '../bride.png'
 import third from '../third.png'
 import fourth from '../fourth.png'
+import shadi from '../shadi.png'
+import mehendi from '../mehendi.png'
+import haldi from '../haldi.png'
+import lagan from '../lagan.png'
 import third1 from '../third1.png'
 import third2 from '../third2.png'
 import FormPage from "./form";
 
+const HALDI = 59;
+const MEHENDI = 61;
+const LAGAN = 67;
+const SHADI = 71;
+const RECEPTION = 73;
+
 interface PageProps {
   isMobile: boolean | null;
   side: string;
+  type: number;
 }
 const Pages = (props: PageProps) => {
   const colors = Array.from({ length: 10 }, generateRandomColor);
   let images: String[] = []
   if (props.side.toLowerCase() == "groom") {
 
-    images = [first, groom, third, fourth]
+    images = [first, groom]
+    images.push(third)
+
+    if (props.type % LAGAN == 0) {
+      images.push(lagan)
+    }
+    if (props.type % HALDI == 0) {
+      images.push(haldi)
+    }
+    if (props.type % MEHENDI == 0) {
+      images.push(mehendi)
+    }
+
+    if (props.type % SHADI == 0) {
+      images.push(shadi)
+    }
+    if (props.type % RECEPTION == 0) {
+      images.push(shadi)
+    }
+    images.push(fourth)
   }
   else {
     images = [first, bride, third, fourth]
