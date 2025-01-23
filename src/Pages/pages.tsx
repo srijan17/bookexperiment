@@ -6,14 +6,15 @@ import FirstPage from "./FirstPage/FirstPage";
 import PageBackground from "./page.jpg";
 import first from '../main.png'
 import second from '../second.png'
-import groom from '../groom.png'
+import groom from '../first.png'
 import bride from '../bride.png'
 import third from '../third.png'
 import fourth from '../fourth.png'
 import shadi from '../shadi.png'
-import mehendi from '../mehendi.png'
-import haldi from '../haldi.png'
-import lagan from '../lagan.png'
+import reception from '../reception.png'
+import mehendi from '../sangeet.png'
+import haldi from '../haldi1.png'
+import lagan from '../lagan1.png'
 import third1 from '../third1.png'
 import third2 from '../third2.png'
 import FormPage from "./form";
@@ -51,7 +52,7 @@ const Pages = (props: PageProps) => {
       images.push(shadi)
     }
     if (props.type % RECEPTION == 0) {
-      images.push(shadi)
+      images.push(reception)
     }
     images.push(fourth)
   }
