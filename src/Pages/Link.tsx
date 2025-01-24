@@ -4,6 +4,7 @@ import background from '../background.png'
 import './form.css';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EventIcon from '@mui/icons-material/Event';
+import { Download } from '@mui/icons-material';
 
 const HALDI = 59;
 const MEHENDI = 61;
@@ -65,6 +66,7 @@ const LinkPage= (props:PageProps) => {
                 <br></br>
                 </>
                 }
+                
 
                 <Box mt={4} display="flex">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdetw0-WTN0so_lKtehDvPaU6JHBkA5wCyL1yHbeBAJszjcog/viewform?embedded=true" target="_blank" rel="noopener noreferrer">
@@ -72,6 +74,16 @@ const LinkPage= (props:PageProps) => {
                         <Typography variant="h5" component="span">RSVP Here</Typography>
                     </a>
                 </Box>
+
+                <Box mt={4} display="flex">
+                    <a href="./invite.pdf" download>
+                        <Download fontSize="large" />
+                        <Typography variant="h6" component="span">Invite</Typography>
+                    </a>
+                </Box>
+
+
+                
             </Box>
 
         </Box>
