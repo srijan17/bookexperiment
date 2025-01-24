@@ -1,23 +1,17 @@
 import { Box, Typography } from "@mui/material";
 import { generateRandomColor } from "../utils";
-import FrontPage from "./FrontPageImg/FrontPage";
-// import FrontPage from "./FrontPage copy/FrontPage";
-import FirstPage from "./FirstPage/FirstPage";
-import PageBackground from "./page.jpg";
-import first from '../main.png'
-import second from '../second.png'
-import groom from '../first.png'
-import bride from '../bride.png'
-import third from '../third.png'
-import fourth from '../fourth.png'
-import shadi from '../shadi.png'
-import reception from '../reception.png'
-import mehendi from '../sangeet.png'
-import haldi from '../haldi1.png'
-import lagan from '../lagan1.png'
-import third1 from '../third1.png'
-import third2 from '../third2.png'
+import first from '../FINAL/MAIN.png'
+import groom from '../FINAL/Groom.png'
+import bride from '../FINAL/Bride.png'
+import third from '../FINAL/Timeline.png'
+import fourth from '../FINAL/Last.png'
+import shadi from '../FINAL/Schedule.png'
+import reception from '../FINAL/Reception.png'
+import mehendi from '../FINAL/Sangeet.png'
+import haldi from '../FINAL/Haldi.png'
+import lagan from '../FINAL/Lagan.png'
 import FormPage from "./form";
+import LinkPage from "./Link";
 
 const HALDI = 59;
 const MEHENDI = 61;
@@ -34,7 +28,8 @@ const Pages = (props: PageProps) => {
   const colors = Array.from({ length: 10 }, generateRandomColor);
   let images: String[] = []
   if (props.side.toLowerCase() == "groom") {
-
+    if(props.type==999952)
+      props.type=59 * 61 * 67 * 71 * 73
     images = [first, groom]
     images.push(third)
 
@@ -76,7 +71,7 @@ const Pages = (props: PageProps) => {
     </Box>
   ))
   // FrontPage({}), FirstPage(),
-  return [...pages, FormPage({})]
+  return [...pages,LinkPage({...props})]
 }
 
 export default Pages
