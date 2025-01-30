@@ -1,15 +1,15 @@
 import { Box, Typography } from "@mui/material";
 import { generateRandomColor } from "../utils";
-import first from '../FINAL/MAIN.png'
-import groom from '../FINAL/Groom.png'
-import bride from '../FINAL/Bride.png'
-import third from '../FINAL/Timeline.png'
-import fourth from '../FINAL/Last.png'
-import shadi from '../FINAL/Schedule.png'
-import reception from '../FINAL/Reception.png'
-import mehendi from '../FINAL/Sangeet.png'
-import haldi from '../FINAL/Haldi.png'
-import lagan from '../FINAL/Lagan.png'
+import first from '../FINAL/small/MAIN.png'
+import groom from '../FINAL/small/Groom.png'
+import bride from '../FINAL/small/Bride.png'
+import third from '../FINAL/small/Timeline.png'
+import fourth from '../FINAL/small/Last.png'
+import shadi from '../FINAL/small/Schedule.png'
+import reception from '../FINAL/small/Reception.png'
+import mehendi from '../FINAL/small/Sangeet.png'
+import haldi from '../FINAL/small/Haldi.png'
+import lagan from '../FINAL/small/Lagan.png'
 import FormPage from "./form";
 import LinkPage from "./Link";
 

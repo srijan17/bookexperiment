@@ -59,7 +59,7 @@ const LinkPage= (props:PageProps) => {
                 </> }
 
 
-                {props.type% HALDI===0 &&  <><a href="https://maps.app.goo.gl/JYaNvbxJQ2Hsn4wKA" target="_blank" rel="noopener noreferrer">
+                {props.type% HALDI===0 &&   <><a href="https://maps.app.goo.gl/JYaNvbxJQ2Hsn4wKA" target="_blank" rel="noopener noreferrer">
                      <LocationOnIcon></LocationOnIcon>  Haldi/Sangeet Venue
                 </a>
 
@@ -69,19 +69,19 @@ const LinkPage= (props:PageProps) => {
                 
 
                 <Box mt={4} display="flex">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdetw0-WTN0so_lKtehDvPaU6JHBkA5wCyL1yHbeBAJszjcog/viewform?embedded=true" target="_blank" rel="noopener noreferrer">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdetw0-WTN0so_lKtehDvPaU6JHBkA5wCyL1yHbeBAJszjcog/viewform?embedded=true" target="_blank" rel="noopener noreferrer"
+                    onClick={(e) => {e.stopPropagation()}}>
                         <EventIcon fontSize="large" />
                         <Typography variant="h5" component="span">RSVP Here</Typography>
                     </a>
                 </Box>
 
-                <Box mt={4} display="flex">
-                    <a href="./invite.pdf" download>
+                <Box mt={4} display="flex" onClick={(e) => e.stopPropagation()}>
+                    <a href="/final.pdf" download>
                         <Download fontSize="large" />
                         <Typography variant="h6" component="span">Invite</Typography>
                     </a>
                 </Box>
-
 
                 
             </Box>
