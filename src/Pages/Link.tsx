@@ -77,7 +77,7 @@ const LinkPage= (props:PageProps) => {
                 </Box>
 
                 <Box mt={4} display="flex" onClick={(e) => e.stopPropagation()}>
-                    <a href="/final.pdf" download>
+                    <a href="https://drive.google.com/file/d/1eewSgLsTHu9bT9iOntoE2dswUpZ9HX-w/view?usp=sharing" download>
                         <Download fontSize="large" />
                         <Typography variant="h6" component="span">Invite</Typography>
                     </a>
