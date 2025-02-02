@@ -10,6 +10,11 @@ import reception from '../FINAL/small/Reception.png'
 import mehendi from '../FINAL/small/Sangeet.png'
 import haldi from '../FINAL/small/Haldi.png'
 import lagan from '../FINAL/small/Lagan.png'
+
+
+import wedBride from '../FINAL/Bride/wed.png'
+import haldiBride from '../FINAL/Bride/haldi.png'
+import mehandiBride from '../FINAL/Bride/mehandi.png'
 import FormPage from "./form";
 import LinkPage from "./Link";
 
@@ -52,7 +57,7 @@ const Pages = (props: PageProps) => {
     images.push(fourth)
   }
   else {
-    images = [first, bride, third, fourth]
+    images = [first, wedBride,haldiBride,mehandiBride,fourth]
 
   }
 
@@ -71,7 +76,12 @@ const Pages = (props: PageProps) => {
     </Box>
   ))
   // FrontPage({}), FirstPage(),
+  // if (props.side.toLowerCase() == "groom") {
   return [...pages,LinkPage({...props})]
+// }
+// else{
+  // return pages
+// }
 }
 
 export default Pages

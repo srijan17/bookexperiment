@@ -68,20 +68,20 @@ const LinkPage= (props:PageProps) => {
                 }
                 
 
-                <Box mt={4} display="flex">
+                {props.side.toLowerCase()=="groom" && <Box mt={4} display="flex">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdetw0-WTN0so_lKtehDvPaU6JHBkA5wCyL1yHbeBAJszjcog/viewform?embedded=true" target="_blank" rel="noopener noreferrer"
                     onClick={(e) => {e.stopPropagation()}}>
                         <EventIcon fontSize="large" />
                         <Typography variant="h5" component="span">RSVP Here</Typography>
                     </a>
-                </Box>
+                </Box>}
 
-                <Box mt={4} display="flex" onClick={(e) => e.stopPropagation()}>
+               {props.side.toLowerCase()=="groom"&& <Box mt={4} display="flex" onClick={(e) => e.stopPropagation()}>
                     <a href="https://drive.google.com/file/d/1eewSgLsTHu9bT9iOntoE2dswUpZ9HX-w/view?usp=sharing" target="_blank">
                         <Download fontSize="large" />
                         <Typography variant="h6" component="span">Invite</Typography>
                     </a>
-                </Box>
+                </Box>}
 
                 
             </Box>
